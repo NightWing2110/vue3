@@ -1,0 +1,10 @@
+Cách sử dụng data: Hàm trả ra dữ liệu mà chúng ta đã khai báo truyền vào template
+Cách sử dụng template: Là 1 mẫu dữ liệu mà chúng ta muốn hiển thị ra nơi mouse dữ liệu
+@click => click
+@mouseover => di chuyển con trỏ vào
+@mouseleave => di chuyển con trỏ ra
+@dblclick => doubleclick
+@mousemove => mouse move
+v-for => vòng lặp              <div class="card" v-for="product in products"></div>
+v-bind => blind class, style
+computed
