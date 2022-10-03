@@ -1,16 +1,18 @@
 <template>
-<div>
-  <navigation-component/>
-</div>
+  <h1 class="fade">Hellooooooooooooooooo</h1>
+  <base-modal 
+    title="this is new title form app component" 
+    content="this is the content modal"
+    theme="example"/>
 </template>
 
 <script>
-import NavigationComponent from './components/NavigationComponent.vue';
+import ModalComponent from './components/ModalComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    NavigationComponent
+    BaseModal: ModalComponent
   },
   data() {
     return {};
@@ -18,24 +20,11 @@ export default {
   methods: {
     onChange()
     {
-      console.log('Running');
-      console.log(this.$refs.hello);
-      console.log(this.$refs.header);
-      this.$refs.hello.onConsoleTesting();
     }
   },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  /* margin-top: 60px; */
-  margin: 0;
-  padding: 0;
-}
+
 </style>

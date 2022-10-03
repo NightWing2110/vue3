@@ -9,3 +9,5 @@ v-for => vòng lặp              <div class="card" v-for="product in products">
 v-bind => blind class, style
 computed
 vue cli => Vue Command Line Interface
+Khi viết style thì sẽ trùng tên class, style của component sẽ ảnh hưởng tới style app => khắc phục khai báo thêm scoped để giới hạn phạm vi( <style scoped lang="css"></style> )
+Props là kĩ thuật truyền những dữ liệu thông qua thuộc tính của component
