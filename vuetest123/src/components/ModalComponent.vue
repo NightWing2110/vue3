@@ -2,9 +2,11 @@
     <div class="modal fade" @click="onCloseModal">
         <div class="modal-dialog">
             <div class="modal-content" :class="{ 'bg-purple': theme === 'contact'}">
-                <div class="modal-header"><h2>{{ title }}</h2></div>
-                <div class="modal-body"><p>{{ content }}</p></div>
-                <div class="modal-footer"></div>
+                <div class="modal-header"><slot name="header"></slot></div>
+                <div class="modal-body">
+                    <slot></slot>
+                </div>
+                <div class="modal-footer"><slot name="footer"></slot></div>
             </div>
         </div>
     </div>    

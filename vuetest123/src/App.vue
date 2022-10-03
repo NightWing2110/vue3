@@ -5,7 +5,16 @@
     title="this is new title form app component" 
     content="this is the content modal"
     theme="example"
-    @cancel="onToggleModal"/>
+    @cancel="onToggleModal">
+    <template v-slot:header>
+      <h2>This is the header</h2>
+    </template>
+    <template v-slot:footer>
+      <button @click="onToggleModal">Cancel</button>
+    </template>
+  <label for="">Name</label>
+  <input type="password"/>
+  </base-modal>
     <button @click="onToggleModal">Toggle Modal</button>
 </template>
 
