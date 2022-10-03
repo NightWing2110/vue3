@@ -1,9 +1,12 @@
 <template>
   <h1 class="fade">Hellooooooooooooooooo</h1>
   <base-modal 
+  v-if="isShowModal"
     title="this is new title form app component" 
     content="this is the content modal"
-    theme="example"/>
+    theme="example"
+    @cancel="onToggleModal"/>
+    <button @click="onToggleModal">Toggle Modal</button>
 </template>
 
 <script>
@@ -15,11 +18,14 @@ export default {
     BaseModal: ModalComponent
   },
   data() {
-    return {};
+    return {
+      isShowModal: false
+    };
   },
   methods: {
-    onChange()
+    onToggleModal()
     {
+      this.isShowModal = !this.isShowModal;
     }
   },
 }

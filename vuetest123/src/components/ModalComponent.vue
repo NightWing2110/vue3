@@ -1,5 +1,5 @@
 <template>
-    <div class="modal fade show">
+    <div class="modal fade" @click="onCloseModal">
         <div class="modal-dialog">
             <div class="modal-content" :class="{ 'bg-purple': theme === 'contact'}">
                 <div class="modal-header"><h2>{{ title }}</h2></div>
@@ -31,6 +31,12 @@ export default {
     },
     data() {
         return {}
+    },
+    methods: {
+        onCloseModal()
+        {
+            this.$emit("cancel")
+        }
     },    
 }
 </script>
