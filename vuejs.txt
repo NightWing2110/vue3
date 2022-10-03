@@ -8,3 +8,4 @@ Cách sử dụng template: Là 1 mẫu dữ liệu mà chúng ta muốn hiển 
 v-for => vòng lặp              <div class="card" v-for="product in products"></div>
 v-bind => blind class, style
 computed
+vue cli => Vue Command Line Interface
