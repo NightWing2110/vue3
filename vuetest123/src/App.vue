@@ -1,6 +1,7 @@
 <template>
   <h1 class="fade">Hellooooooooooooooooo</h1>
-  <base-modal 
+  <teleport to="body">
+    <base-modal 
   v-if="isShowModal"
     title="this is new title form app component" 
     content="this is the content modal"
@@ -15,6 +16,7 @@
   <label for="">Name</label>
   <input type="password"/>
   </base-modal>
+  </teleport>
     <button @click="onToggleModal">Toggle Modal</button>
 </template>
 
