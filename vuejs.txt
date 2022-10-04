@@ -1,3 +1,5 @@
+DOM: document object model dùng để truy xuất các tài liệu dạng html và xml. DOM đại diện cho 1 tài liệu 
+như là 1 cây cấu trúc dữ liệu. Còn node thì đại diện cho 1 phần tử trong DOM
 Cách sử dụng data: Hàm trả ra dữ liệu mà chúng ta đã khai báo truyền vào template
 Cách sử dụng template: Là 1 mẫu dữ liệu mà chúng ta muốn hiển thị ra nơi mouse dữ liệu
 @click => click
@@ -6,8 +8,13 @@ Cách sử dụng template: Là 1 mẫu dữ liệu mà chúng ta muốn hiển 
 @dblclick => doubleclick
 @mousemove => mouse move
 v-for => vòng lặp              <div class="card" v-for="product in products"></div>
-v-bind => blind class, style
+v-bind(ràng buộc) => blind class, style
 computed
 vue cli => Vue Command Line Interface
 Khi viết style thì sẽ trùng tên class, style của component sẽ ảnh hưởng tới style app => khắc phục khai báo thêm scoped để giới hạn phạm vi( <style scoped lang="css"></style> )
 Props là kĩ thuật truyền những dữ liệu thông qua thuộc tính của component
+slot là 1 vị trí có thể hiển thị được và custom html trong 1 component
+@click.alt, @click.ctrl => click phải giữ alt, ctrl
+teleport render 1 nội dung ra 1 nơi mà chúng ta muốn
+@submit.prevent sau khi submit sẽ ko đc chuyển trang
+v-model => blind(ràng buộc) 2 chiều

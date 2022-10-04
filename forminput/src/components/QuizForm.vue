@@ -29,7 +29,7 @@
                 <input
                   id="email"
                   type="email"
-                  placeholder="skyalbert.960@gmail.com"
+                  placeholder="luuquanghoangdy@gmail.com"
                   v-model="quiz.email"
                 />
               </div>
@@ -74,7 +74,7 @@
               <label for="about">What is your project all about?</label>
               <textarea
                 id="about"
-                placeholder="Hey RHP Team, I’d love  to talk to you about  branding this Something AI  project we’re working..."
+                placeholder="Hey, I’d love  to talk to you about  branding this Something AI  project we’re working..."
                 v-model="quiz.desc"
               />
             </div>
@@ -140,7 +140,7 @@ export default {
   data() {
     return {
       quiz: {
-        fullName: "Sky Albert",
+        fullName: "",
         email: "",
         desc: "",
         jobs: [],
