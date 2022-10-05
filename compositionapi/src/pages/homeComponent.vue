@@ -1,45 +1,28 @@
 <template>
     <h1>Overview page is here</h1>
-    <p>{{ secondName }}</p>
-    <p>{{ car }}</p>
+    <input type="text" v-model="searchText">
+    <ul>
+        <li v-for="(customer, index) in customersFilled" :key="index">
+        {{ customer }}</li>
+    </ul>
     <button @click="onChangeSomething">CLick me</button>
 </template>
 
 <script>
-import { ref, reactive } from "vue"
+import { computed, ref, reactive } from "vue"
 export default {
     setup() {
-        const firstName = ref("NightWing");
-        const secondName = ref({
-            name: "Hu",
-            something: "Ha"
-        });
-        let car = reactive({
-            price: 2110,
-            name: "Audi"
+        const searchText = ref("");
+        const customers = reactive(["Alazul", "NightWing", "Robin", "Bat"]);
 
-        });
+        const customersFilled = computed(() => 
+            customers.map(customer => {
+                customer = customer.toLowerCase()
+                return customer
+            }).filter((customer) => customer.includes(searchText.value.toLowerCase()))
+        );
         
-        function onChangeSomething()
-        {
-            // console.log("Running..............");
-            // // firstName = "Alazul";
-            // console.log(secondName);
-            // console.log(car);
-            // firstName.value = "Alazul";
-            // secondName.value.name = "fffffff";
-            // car.price = 1999;
-            secondName.value = {
-                name: "Alazul",
-                something: "batcave"
-            };
-            car = {
-                price: 1999,
-                name: "something"
-            }
-        }
-
-        return { car, firstName, secondName, onChangeSomething };
+        return { customersFilled, searchText};
     }
 };
 </script>
