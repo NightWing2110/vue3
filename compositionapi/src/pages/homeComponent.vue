@@ -3,13 +3,13 @@
     <input type="text" v-model="searchText">
     <ul>
         <li v-for="(customer, index) in customersFilled" :key="index">
-        {{ customer }}</li>
+        {{ customer }}
+        </li>
     </ul>
-    <button @click="onChangeSomething">CLick me</button>
 </template>
 
 <script>
-import { computed, ref, reactive } from "vue"
+import { watch, computed, ref, reactive, watchEffect } from "vue"
 export default {
     setup() {
         const searchText = ref("");
@@ -21,6 +21,16 @@ export default {
                 return customer
             }).filter((customer) => customer.includes(searchText.value.toLowerCase()))
         );
+
+        watch(searchText, (newValue, oldValue) => {
+            console.log(newValue, oldValue)
+        });
+        
+        watchEffect(() => {
+            if(searchText.value) {
+                console.log("Run again");
+            }
+        })
         
         return { customersFilled, searchText};
     }
