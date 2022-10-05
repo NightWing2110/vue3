@@ -11,7 +11,17 @@
 <script>
 import { watch, computed, ref, reactive, watchEffect } from "vue"
 export default {
-    setup() {
+    props: {
+        theme: {
+            type: String,
+            required: false,
+            default: "light"
+        },
+    },
+    // eslint-disable-next-line vue/no-setup-props-destructure
+    setup({ theme }, { emit }) {
+        console.log(theme);
+        console.log(emit);
         const searchText = ref("");
         const customers = reactive(["Alazul", "NightWing", "Robin", "Bat"]);
 
